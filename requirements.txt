@@ -6,3 +6,4 @@ langchain-chroma
 faiss-cpu 
 langchain_groq
 chromadb
+protobuf==3.20.3
