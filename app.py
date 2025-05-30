@@ -1,7 +1,3 @@
-import os, torch
-os.environ["STREAMLIT_SERVER_ENABLE_FILE_WATCHER"] = "false"
-torch.classes.__path__ = []
-
 import streamlit as st
 GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
 
@@ -33,7 +29,6 @@ def initalize_retriever(dataset_path: str):
 
     # create chroma vector store
     vector_store = Chroma(
-    collection_name="compentencies_collection",
     embedding_function=embeddings,
     )
 
